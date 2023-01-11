@@ -6,8 +6,8 @@ var logger = require('morgan');
 var mongoose = require('mongoose');
 
 mongoose.set('strictQuery', true);
-mongoose.connect('mongodb://127.0.0.1/blog', (err) => {
-  console.log(err ? err : 'Connected to database');
+mongoose.connect('mongodb://127.0.0.1:27017/team', (err) => {
+  console.log(err ? err : 'Connected to db');
 });
 
 var indexRouter = require('./routes/index');
@@ -22,12 +22,15 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
 
 //cookies
-app.use(cookieParser());
-
-//public 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use((req, res, next) => {
+  console.log(req.cookies);
+  res.cookie('name', 'RASHI');
+  next();
+});
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
