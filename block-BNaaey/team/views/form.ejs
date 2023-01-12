@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div>
+        <div class="header">
+            <div class="top-nav">
+              <ul>
+                <li><a href="/users/login">LOG IN</a></li>
+                <li><a href="/">HOME</a></li>
+              </ul>
+              <button>CONTACT US</button>
+            </div>
+            <div class="side-nav">
+              <div class="wrapper ten">
+                <div>
+                  <h3 class="bounce">
+                    <span>R</span>
+                    <span>o</span>
+                    <span>S</span>
+                    <span>h</span>
+                </div>
+              </div>
+              <a href="">TEAM TOUR</a>
+            </div>
+          </div>
+      <form action="/users/register" method="POST">
+        <div>
+          <label for="user-name">User Name</label>
+          <br />
+          <input
+            type="text"
+            name="name"
+            id="user-name"
+            placeholder="Enter name of the user"
+          />
+        </div>
+        <div>
+          <label for="user-email">User Email</label>
+          <br />
+          <input
+            type="text"
+            name="email"
+            id="user-email"
+            placeholder="Enter the email"
+          />
+        </div>
+        <div>
+          <label for="user-password">User Password</label>
+          <br />
+          <input
+            type="text"
+            name="password"
+            id="user-password"
+            placeholder="Enter the password"
+          />
+        </div>
+        <div>
+          <label for="user-age">User Age</label>
+          <br />
+          <input
+            type="text"
+            name="age"
+            id="user-age"
+            placeholder="Enter age of the user"
+          />
+        </div>
+        <div>
+          <label for="user-phone">User Phone Number</label>
+          <br />
+          <input
+            type="text"
+            name="phone"
+            id="user-phone"
+            placeholder="Enter the phone number"
+          />
+        </div>
+        <div>
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
