@@ -10,7 +10,7 @@ router.get('/', function (req, res, next) {
 router.get('/register', (req, res, next) => {
   var error = req.flash('error')[0];
   console.log(error);
-  res.render('form');
+  res.render('form', { error });
 });
 
 function createUser(req, res, next) {
