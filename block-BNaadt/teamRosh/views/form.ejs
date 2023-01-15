@@ -31,6 +31,9 @@
             </div>
           </div>
       <form action="/users/register" method="POST">    
+        <% if(error){ %>
+          <p class="err"><%= error %></p>
+          <% } %>    
         <div>
           <label for="user-name">User Name</label>
           <br />
