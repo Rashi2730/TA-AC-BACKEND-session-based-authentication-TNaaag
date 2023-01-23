@@ -8,7 +8,7 @@ Design an e-commerce site where we have 2 different logins
 An admin can log in and create product which will contain fields:
 
 - name of product
-- quantity of product
+- quantity of product,sjBVKaeknrlmtrl;hmn
 - price of product
 - image (optional)
 - likes
